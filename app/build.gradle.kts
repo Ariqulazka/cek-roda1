@@ -4,10 +4,8 @@ plugins {
     id("kotlin-kapt")
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
-    google-gms-google-services = { id = "com.google.gms.google-services", version.ref =
-    "googleGmsGoogleServices" }
-    google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref =
-    "googleFirebaseCrashlytics" }
+    alias(libs.plugins.google.gms.google.services) apply false
+    alias(libs.plugins.google.firebase.crashlytics) 
 }
 
 android {
